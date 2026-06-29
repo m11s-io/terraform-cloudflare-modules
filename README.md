@@ -12,7 +12,8 @@ Creates a Cloudflare Zero Trust tunnel with automatic secret generation and ingr
 
 ```hcl
 module "tunnel" {
-  source = "github.com/m11s-io/terraform-cloudflare-modules//modules/tunnel"
+  source  = "m11s-io/modules/cloudflare//modules/tunnel"
+  version = "~> 0.1"
 
   account_id  = var.cloudflare_account_id
   tunnel_name = "k8s-prod"
@@ -49,7 +50,8 @@ Enables Cloudflare Email Routing for a zone — forwarding rules, catch-all, and
 
 ```hcl
 module "email_routing" {
-  source = "github.com/m11s-io/terraform-cloudflare-modules//modules/email-routing"
+  source  = "m11s-io/modules/cloudflare//modules/email-routing"
+  version = "~> 0.1"
 
   zone_id         = var.zone_id
   domain          = "example.com"
@@ -74,7 +76,7 @@ module "email_routing" {
 
 ---
 
-### `modules/forthwall-shop`
+### `modules/fourthwall-shop`
 
 DNS records for a [Fourthwall](https://fourthwall.com) shop on a custom domain — shop A record, Zendesk support subdomain, and SendGrid email authentication.
 
@@ -82,7 +84,8 @@ DNS records for a [Fourthwall](https://fourthwall.com) shop on a custom domain �
 
 ```hcl
 module "forthwall_shop" {
-  source = "github.com/m11s-io/terraform-cloudflare-modules//modules/forthwall-shop"
+  source  = "m11s-io/modules/cloudflare//modules/fourthwall-shop"
+  version = "~> 0.1"
 
   zone_id                    = var.zone_id
   domain                     = "example.com"
