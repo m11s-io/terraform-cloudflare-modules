@@ -4,7 +4,7 @@ variable "zone_id" {
 }
 
 variable "domain" {
-  description = "Domain name (e.g., 'm11s.io', 'workanoo.com')"
+  description = "Domain name (e.g., 'example.com')"
   type        = string
 }
 
