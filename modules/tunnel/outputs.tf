@@ -5,9 +5,9 @@ output "tunnel_id" {
   value       = cloudflare_zero_trust_tunnel_cloudflared.tunnel.id
 }
 
-output "tunnel_token" {
-  description = "The tunnel token for cloudflared deployment"
-  value       = cloudflare_zero_trust_tunnel_cloudflared.tunnel.tunnel_token
+output "tunnel_secret" {
+  description = "The tunnel secret (base64) for constructing cloudflared credentials"
+  value       = random_bytes.tunnel_secret.base64
   sensitive   = true
 }
 
