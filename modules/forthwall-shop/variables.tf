@@ -4,14 +4,13 @@ variable "zone_id" {
 }
 
 variable "domain" {
-  description = "Apex domain (e.g. m11s.io, farfolk.com)"
+  description = "Apex domain (e.g. example.com)"
   type        = string
 }
 
 variable "shop_ip" {
   description = "Forthwall origin IP for the shop A record"
   type        = string
-  default     = "34.117.223.165"
 }
 
 variable "zendesk_verification_token" {

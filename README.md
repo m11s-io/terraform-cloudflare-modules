@@ -114,4 +114,4 @@ DNS records created under `shop.<domain>`:
 
 ## License
 
-MIT
+MPL-2.0
