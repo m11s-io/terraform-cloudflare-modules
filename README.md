@@ -117,4 +117,4 @@ DNS records created under `shop.<domain>`:
 
 ## License
 
-MPL-2.0
+Apache-2.0
